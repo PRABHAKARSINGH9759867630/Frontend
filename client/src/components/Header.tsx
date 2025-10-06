@@ -1,33 +1,41 @@
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "./ThemeProvider";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Academics", href: "/academics" },
-  { label: "Admissions", href: "/admissions" },
-  { label: "Activities", href: "/activities" },
-  { label: "Events", href: "/events" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Achievements", href: "/achievements" },
-  { label: "Contact", href: "/contact" },
-];
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+
+  const navItems = [
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.about"), href: "/about" },
+    { label: t("nav.academics"), href: "/academics" },
+    { label: t("nav.admissions"), href: "/admissions" },
+    { label: t("nav.activities"), href: "/activities" },
+    { label: t("nav.events"), href: "/events" },
+    { label: t("nav.gallery"), href: "/gallery" },
+    { label: t("nav.achievements"), href: "/achievements" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
 
   return (
     <>
       <div className="bg-primary text-primary-foreground py-2">
         <div className="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-between gap-2 text-sm">
           <div className="flex items-center gap-4">
-            <span>📧 info@excellenceacademy.edu</span>
-            <span>📞 +1 (555) 123-4567</span>
+            <span>📧 info@gdgoenka.edu</span>
+            <span>📞 +91 (11) 2345-6789</span>
           </div>
           <div className="flex items-center gap-2">
             <Button
@@ -36,7 +44,7 @@ export function Header() {
               className="text-primary-foreground hover:bg-primary-foreground/10"
               data-testid="link-admissions"
             >
-              Admissions
+              {t("header.admissions")}
             </Button>
             <Button
               variant="ghost"
@@ -44,7 +52,7 @@ export function Header() {
               className="text-primary-foreground hover:bg-primary-foreground/10"
               data-testid="link-careers"
             >
-              Careers
+              {t("header.careers")}
             </Button>
             <Button
               variant="ghost"
@@ -52,7 +60,7 @@ export function Header() {
               className="text-primary-foreground hover:bg-primary-foreground/10"
               data-testid="link-erp-login"
             >
-              ERP Login
+              {t("header.erp")}
             </Button>
           </div>
         </div>
@@ -63,11 +71,11 @@ export function Header() {
           <div className="flex items-center justify-between h-16">
             <Link href="/" className="flex items-center gap-3" data-testid="link-home">
               <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center text-primary-foreground font-bold text-xl">
-                EA
+                GD
               </div>
               <div>
-                <div className="font-bold text-lg">Excellence Academy</div>
-                <div className="text-xs text-muted-foreground">Inspiring Future Leaders</div>
+                <div className="font-bold text-lg">GD Goenka Public School</div>
+                <div className="text-xs text-muted-foreground">{t("header.tagline")}</div>
               </div>
             </Link>
 
@@ -86,6 +94,29 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-2">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" data-testid="button-language-toggle">
+                    <Languages className="w-5 h-5" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem
+                    onClick={() => setLanguage("en")}
+                    className={language === "en" ? "bg-accent" : ""}
+                    data-testid="language-en"
+                  >
+                    English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => setLanguage("hi")}
+                    className={language === "hi" ? "bg-accent" : ""}
+                    data-testid="language-hi"
+                  >
+                    हिन्दी (Hindi)
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               <Button
                 variant="ghost"
                 size="icon"

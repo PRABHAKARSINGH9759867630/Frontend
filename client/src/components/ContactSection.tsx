@@ -67,9 +67,9 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-bold mb-2">Our Location</h4>
                   <p className="text-muted-foreground">
-                    123 Education Boulevard<br />
-                    Innovation District<br />
-                    New York, NY 10001
+                    Sector 48, Sohna Road<br />
+                    Gurugram, Haryana<br />
+                    India - 122018
                   </p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-2">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567<br />+1 (555) 987-6543</p>
+                  <p className="text-muted-foreground">+91 (124) 456-7890<br />+91 (124) 456-7891</p>
                 </div>
               </div>
             </Card>
@@ -95,8 +95,8 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-bold mb-2">Email</h4>
                   <p className="text-muted-foreground">
-                    info@excellenceacademy.edu<br />
-                    admissions@excellenceacademy.edu
+                    info@gdgoenka.edu<br />
+                    admissions@gdgoenka.edu
                   </p>
                 </div>
               </div>

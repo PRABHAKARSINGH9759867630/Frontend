@@ -1,0 +1,174 @@
+Design a modern, fully responsive, vibrant, and 3D-enhanced school website for GD Goenka Public School (Pre-Primary to Grade 12). The website should be visually immersive, engaging, and interactive, appealing to students, parents, and staff. Integrate smooth animations, interactive 3D visuals, and vibrant colors to showcase school life dynamically.
+
+1. General Requirements
+
+Color Scheme: Vibrant, energetic colors for younger grades; professional yet lively colors for senior grades.
+
+Typography: Clean fonts for readability; playful fonts for Pre-Primary.
+
+Responsiveness: Desktop, tablet, and mobile optimized.
+
+Accessibility: High contrast, alt text for images, keyboard navigation.
+
+Animations: Smooth fade-ins, slide-ins, hover effects, animated counters.
+
+3D Integration: Use Three.js, Spline, or Lottie 3D for interactive models. Examples:
+
+3D rotating school building model in Hero section.
+
+3D animated playground, library, or lab models for activities.
+
+Interactive 3D buttons or cards for subjects/achievements.
+
+CMS/ERP Integration: Easy content updates via Strapi or similar.
+
+SEO Friendly: Meta tags, headings, alt attributes, semantic HTML.
+
+Performance Optimized: Lazy load 3D models, compressed images, optimized scripts.
+
+2. Website Pages & 3D Features
+A. Home Page
+
+Hero Section: Full-width slider with vibrant photos and 3D rotating school building; animated taglines; CTA buttons (Admissions, ERP Login, Contact).
+
+Highlights Marquee: Scrolling news and updates with hover animations.
+
+Principal’s Desk: Photo, welcome message, monthly focus, subtle 3D background elements.
+
+Key Features Section: 3D icons for infrastructure, curriculum, sports, and activities.
+
+Events & Achievements: Carousel/animated cards with 3D hover effects.
+
+Footer: Contact info, social media, quick navigation.
+
+B. About Page
+
+Mission & Vision: Animated 3D iconography.
+
+School History & Infrastructure: 3D interactive map showing classrooms, labs, sports areas.
+
+Faculty & Staff: 3D animated staff cards with hover effects.
+
+Board Affiliation & Accreditations: Interactive badges/icons.
+
+C. Academics
+
+Curriculum Overview: Animated 3D timeline for grades Pre-Primary to 12.
+
+Subjects & Streams: 3D cards or icons for Science, Commerce, Arts, electives.
+
+Special Programs: 3D interactive models for STEM labs, robotics, art workshops.
+
+Assessment & Achievements: Animated 3D stats counters.
+
+D. Admissions
+
+Admission Process: Step-by-step 3D animated illustrations.
+
+Online Form: Dynamic, responsive, with interactive 3D progress indicators.
+
+Fee Structure: Optional popup with 3D card effect.
+
+FAQs: 3D accordion style or hover animations.
+
+E. Activities
+
+Clubs & Societies: 3D interactive icons/cards for each club.
+
+Sports: Animated 3D playground, courts, or sports equipment models.
+
+Arts & Cultural Programs: 3D stage/arena animation.
+
+Photo/Video Gallery: Masonry layout with 3D hover effects.
+
+F. Events
+
+Upcoming & Past Events: Animated 3D timeline or carousel.
+
+Calendar View: 3D interactive calendar.
+
+Event Highlights: Hoverable 3D cards for each event.
+
+G. Gallery
+
+Photo Gallery: Interactive 3D grid layout.
+
+Video Gallery: 3D video cards with hover effect.
+
+Category Filters: Animated 3D buttons to filter by grade, event, or activity.
+
+H. Achievements
+
+Student & Teacher Achievements: 3D trophy icons with hover animations.
+
+School Rankings & Recognitions: Animated 3D counters.
+
+I. Contact
+
+Contact Form: Interactive 3D form elements (fields and buttons).
+
+Location: 3D school map with clickable markers.
+
+Phone & Email: Animated 3D icons.
+
+J. Extra Features
+
+ERP Login & Parent Portal
+
+Career Opportunities Page
+
+Notice Board / Circulars Page
+
+Multilingual Support: English + Hindi toggle
+
+Accessibility Widget
+
+Optional Live Chat or WhatsApp Widget
+
+3. Design Guidelines
+
+Vibrant Color Palette: Primary colors for energy + complementary soft shades for readability.
+
+3D Elements: Integrate subtle 3D animations for an immersive feel without affecting performance.
+
+Consistent UI: Uniform headers, footers, buttons, and cards.
+
+Interactive Components: 3D hover effects, animated counters, interactive timelines, rotating models.
+
+4. Technical Specifications
+
+Framework: React.js (hooks & functional components)
+
+3D Library: Three.js, Spline, or Lottie 3D
+
+CMS: Strapi or headless CMS
+
+Routing: React Router
+
+State Management: Redux or Context API
+
+Hosting: Vercel / Netlify / AWS
+
+Performance: Lazy load 3D models, optimized images, code splitting
+
+5. Optional Enhancements
+
+Live Chat or WhatsApp Widget
+
+Push Notifications for Announcements
+
+Search Functionality Across Site
+
+Interactive 3D Admission Form Progress
+
+Lottie 3D Animations for Younger Grades
+
+✅ Deliverables:
+
+Fully coded React.js website with all pages functional.
+
+Integrated CMS for dynamic content updates.
+
+Mobile-first responsive design with vibrant colors and 3D elements.
+
+Documentation for 3D model integration, maintenance, and updates.

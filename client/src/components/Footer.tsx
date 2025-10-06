@@ -112,7 +112,7 @@ export function Footer() {
           </div>
 
           <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm opacity-80">
-            <p>© 2025 Excellence Academy. All rights reserved.</p>
+            <p>© 2025 GD Goenka Public School. All rights reserved.</p>
           </div>
         </div>
       </div>

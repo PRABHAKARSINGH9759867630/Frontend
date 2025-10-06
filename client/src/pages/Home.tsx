@@ -36,7 +36,7 @@ export default function Home() {
     {
       id: 1,
       image: heroImage,
-      tagline: "Welcome to Excellence Academy",
+      tagline: "Welcome to GD Goenka Public School",
       subtitle: "Where Learning Meets Innovation and Every Student Achieves Their Full Potential",
       cta1Text: "Apply Now",
       cta2Text: "Virtual Tour",
@@ -274,15 +274,15 @@ export default function Home() {
       <HeroSlider slides={heroSlides} />
       <ScrollingNotices notices={notices} />
       <PrincipalMessage
-        name="Dr. Sarah Johnson"
-        title="Principal, Excellence Academy"
+        name="Dr. Anjali Sharma"
+        title="Principal, GD Goenka Public School"
         photo={principalPhoto}
-        message="Welcome to Excellence Academy, where we believe every child has the potential to achieve greatness. Our commitment to academic excellence, combined with holistic development, ensures that our students are well-prepared for the challenges of tomorrow. Together, we create a nurturing environment where curiosity thrives and dreams take flight."
+        message="Welcome to GD Goenka Public School, where we believe every child has the potential to achieve greatness. Our commitment to academic excellence, combined with holistic development, ensures that our students from Pre-Primary to Grade 12 are well-prepared for the challenges of tomorrow. Together, we create a nurturing environment where curiosity thrives and dreams take flight."
         fullMessageLink="/principal-message"
       />
       <WelcomeSection
         title="Building Tomorrow's Leaders Today"
-        description="At Excellence Academy, we are dedicated to providing world-class education that nurtures young minds, fosters creativity, and builds character. Our state-of-the-art facilities, experienced faculty, and innovative curriculum create the perfect environment for students to excel academically and personally."
+        description="At GD Goenka Public School, we are dedicated to providing world-class education from Pre-Primary to Grade 12 that nurtures young minds, fosters creativity, and builds character. Our state-of-the-art facilities, experienced faculty, and innovative curriculum create the perfect environment for students to excel academically and personally."
       />
       <KeyFeatures features={features} />
       <StudentSpotlight spotlights={spotlights} />
