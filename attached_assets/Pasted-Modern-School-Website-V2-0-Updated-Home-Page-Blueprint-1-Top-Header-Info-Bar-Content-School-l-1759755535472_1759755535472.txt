@@ -1,0 +1,200 @@
+Modern School Website V2.0 – Updated Home Page Blueprint
+1. Top Header / Info Bar
+
+Content: School logo, name, tagline/motto, contact info, quick links (Admissions, Careers, Login, ERP).
+
+CMS Source: Builder.io (editable).
+
+Features: Sticky on scroll, accessible on all pages.
+
+Animation: Subtle hover effects on links.
+
+2. Navigation Menu
+
+Content: Home, About Us, Academics, Admissions, Activities, Events, Gallery, Achievements, Contact Us.
+
+CMS Source: Builder.io (for menu order and labels).
+
+Features: Responsive, collapsible on mobile, active link highlight.
+
+3. Hero Section / Banner Slider
+
+Content: Full-width banner slider with tagline, CTA buttons.
+
+CMS Source: Builder.io for layout; Strapi for dynamic images/news highlights.
+
+Animation: Smooth fade-in/out or slide-in via Framer Motion.
+
+4. Scrolling Notices / Highlights
+
+Content: Latest circulars, admission deadlines, exam updates.
+
+CMS Source: Strapi collection: Notice
+
+Features: Marquee or carousel with clickable links.
+
+5. Principal's / Director's Desk
+
+Content: Professional photo, short welcome message (monthly update), link to full message.
+
+CMS Source: Strapi (Single Type: PrincipalMessage)
+
+React Component: PrincipalMessage component.
+
+Benefit: Adds personal touch and builds parent trust.
+
+6. Welcome / Intro Section
+
+Content: Short intro about the school with “Learn More” button.
+
+CMS Source: Builder.io.
+
+Animation: Fade-in on scroll.
+
+7. Key Features / Why Choose Us
+
+Content: Cards/icons for Academic Excellence, Sports, Infrastructure, Faculty, Activities.
+
+CMS Source: Builder.io; optionally Strapi for dynamic icons/text.
+
+Animation: Slide-in on scroll.
+
+8. Student / Alumni Spotlight
+
+Content: "Student of the Month" or "Alumni Achiever" photo, achievement, short quote.
+
+CMS Source: Strapi (Spotlight Collection)
+
+React Component: SpotlightCarousel or SpotlightGrid.
+
+Benefit: Motivates students and highlights school success.
+
+9. Achievements / News Section
+
+Content: Latest awards, press coverage, student achievements.
+
+CMS Source: Strapi (News Article)
+
+Component: NewsFeedCarousel.
+
+10. Upcoming Events Preview
+
+Content: Event name, date, location, short description.
+
+CMS Source: Strapi (Event)
+
+Custom Component: EventsCarousel.
+
+11. Virtual Campus Tour (360° View)
+
+Content: Interactive campus tour of labs, library, sports facilities.
+
+Implementation: Embed Matterport or Kuula via Builder.io custom component.
+
+Benefit: Provides remote parents a "wow" factor, aids admissions.
+
+12. Blog / Articles Section Preview
+
+Content: 2–3 latest education tips, school pedagogy, or student well-being articles.
+
+CMS Source: Strapi (Articles collection)
+
+Benefit: SEO boost, positions school as a thought leader.
+
+13. Quick Facts / School at a Glance
+
+Content: Student-Teacher Ratio, Campus Area, Years of Excellence, Total Students.
+
+CMS Source: Builder.io or Strapi
+
+React Component: StatsCounter with react-countup for animation.
+
+Benefit: Highlights key metrics visually.
+
+14. Affiliations & Accreditations Bar
+
+Content: CBSE, IB, British Council, etc. logos in static bar or slow-scrolling carousel.
+
+CMS Source: Builder.io (Static)
+
+15. School Calendar Highlights
+
+Content: 2–3 key dates from academic calendar (PTM, holidays, exam start).
+
+CMS Source: Strapi Event Collection with “Category” field.
+
+Feature: Filter to display only relevant categories on homepage.
+
+16. Photo / Video Gallery Preview
+
+Content: Images/videos from events.
+
+CMS Source: Strapi Media Library
+
+Component: GalleryGrid or lightbox-enabled carousel.
+
+17. Testimonials
+
+Content: Quotes from parents, students, alumni.
+
+CMS Source: Strapi or Builder.io
+
+Component: TestimonialsSlider
+
+18. Quick Links / CTA Blocks
+
+Content: ERP Login, Fee Payment, Prospectus Download, Career Openings.
+
+CMS Source: Builder.io + Strapi (for dynamic career info)
+
+Animation: Hover scaling + micro-interactions
+
+19. Location / Contact Section
+
+Content: Address, phone, email, Google Map embed.
+
+CMS Source: Builder.io editable block
+
+20. Footer
+
+Content: Important links, social media handles, copyright, developer credit.
+
+CMS Source: Builder.io reusable footer block
+
+21. Global Search Bar
+
+Feature: Full-screen search modal for news, events, circulars, pages.
+
+Implementation: Strapi API endpoint or Algolia
+
+React Component: SearchModal
+
+22. Accessibility Widget
+
+Feature: Font resizing, contrast change, screen reader mode.
+
+Implementation: Third-party (UserWay/AccessiBe)
+
+Integration: Script in _app.js or _document.js
+
+23. Theme Toggle (Light/Dark Mode)
+
+Feature: Switch between light and dark theme.
+
+Implementation: Tailwind CSS dark mode + React Context API
+
+Updated Integration Overview Table
+Section / Feature	Purpose	CMS / Data Source	React Component / Implementation
+Principal's Desk	Personal touch, builds trust	Strapi (Single Type)	PrincipalMessage
+Virtual Tour	Campus tour, wow factor	Builder.io (embed URL)	Custom iFrame component
+Student Spotlight	Motivates & showcases achievements	Strapi (Spotlight Collection)	SpotlightCarousel/Grid
+School at a Glance	Visual key metrics	Builder.io / Strapi	StatsCounter with animation
+Affiliations Bar	Boost credibility	Builder.io	Static/scroller component
+Blog / Articles	SEO, thought leadership	Strapi (Articles)	ArticlesPreview
+Global Search	Navigation & discovery	Strapi / Algolia	SearchModal
+Accessibility Widget	WCAG compliance	Third-party	Script integration
+Theme Toggle	User personalization	Built-in Tailwind + React Context	Toggle button
+
+💡 This enhanced homepage now balances visual appeal, interactivity, personalization, and utility, while keeping content management separate and easy for marketing/admin teams.
+
+If you want, I can now draw a visual wireframe of this homepage showing all sections with their CMS source and components, ready to hand off to designers/developers.
