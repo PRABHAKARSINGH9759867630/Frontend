@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -61,7 +59,6 @@ export default function Admissions() {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       <section className="relative h-96 bg-gradient-to-r from-accent to-chart-3 text-white flex items-center">
         <div className="max-w-7xl mx-auto px-4">
@@ -211,7 +208,6 @@ export default function Admissions() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

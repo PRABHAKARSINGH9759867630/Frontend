@@ -1,20 +1,19 @@
 import { StudentSpotlight } from "../StudentSpotlight";
-import studentPhoto from "@assets/generated_images/Student_achievement_spotlight_23313d01.png";
 
 export default function StudentSpotlightExample() {
   const spotlights = [
     {
       id: 1,
-      name: "Emma Rodriguez",
-      photo: studentPhoto,
+      name: "Prabh",
+      photo: "https://lh3.googleusercontent.com/rd-d/ALs6j_HOsK7vArcqKfCBib2a9zxJd2ZeuFQd6mgOZjxlFmBGtTduAKVHgxNu7WBYslDPo3tY2cbwO4I4HPSs853x5F_3e1OLoPvozaWYemOLe0ksd-IcHVE447oq4dlhceQ38JK-XCCs0u1sQRN5iD77JeClN2jUsLkzY-j-Fqrn6fHym72ZgQ46xGcRMyjU10-5Y9TKfIC6LKd2_w0su3w9Kox5230YYvVlnsmsqn67VkGt1ZS-a6BIA3DpIb0rLrLBeIPW0ZaBuYciaHCJIsaIIEmJYM4vxAJJdjdB_15UYpqsuwv-R343UUFDKvsicfWcP4jhMV27RQ3WLMadL3UQTms1IUn4kMUw5LINHjOrC1aWZDYg32QY9jptgQSbGMPkErqxmaqKJRIPb4Bk0ow3HZjEBbzCwZe3VM6xjvmvsX_Q3iU1t7IZEnPSMFabsTeAnu6Y9S16oQfiVQ8Ev-KCqwcS95PZpKheJ4R3qy1MNvErq1Mazj4IFFiEJKHGiKKE24GtQUQ8jQhom2OQ4cdv08yO9HDLNHDGwmbugSMj1S1akVJ8uD99KfanUydR574sYyHvD5-gwQevEk3YSsUBb7aY5tN0FEE-7DSJ5dymbCDk8WGEKGgSoiLk6Uw2fu5hpTw1UUpL7I_nG8oufsMcKQL5hzkX7ElpGKAeSPOSzTnlz520CZMBUHavYkomT811DE5OXv3OnalY9eakHVFSnZebuMjCKAVukZbJc_sIYLqSsnWLNE4yaAk-3Rzk9nBE0GnzbFu68rfI4fADT3FD_MqvbYzG9hqHjH8cqxDCRSfelEqhRSmAhg7Y98GrgT2ppfAVODDAXDH0EX12MHL0PRPQRmIvCWNztdaWVuMGSIOJR9tWaeWGmnfAJUYcjOJjH0lGW5ootLIL1035RvPSFleqI-XffnCLmRwyelrUWVlozYCgmZiQ7znC6BrznT8S3O0jWtE70RDsc2NeAva90GZ6DbtAgAaH8LS5bJPi7Lvy-6YmsDCQody_ZFJLhrC5btgzlWoLnx5dXstd1Wzo-R6mrWIQ-jIfTc51Mi9-kuzwgYByBgRs97JUq4-TatQzF1OwAgKmd8HooSZzuyrzPCzshwUyBFite3NRuqPiCoZ-pSQ4pgEbOVU=w1920-h917?auditContext=prefetch",
       achievement: "National Science Olympiad Gold Medalist",
       quote: "Excellence Academy gave me the resources and mentorship to pursue my passion for science.",
       category: "student" as const,
     },
     {
       id: 2,
-      name: "Michael Chen",
-      photo: studentPhoto,
+      name: "Prabhakar",
+      photo: "https://lh3.googleusercontent.com/rd-d/ALs6j_HOsK7vArcqKfCBib2a9zxJd2ZeuFQd6mgOZjxlFmBGtTduAKVHgxNu7WBYslDPo3tY2cbwO4I4HPSs853x5F_3e1OLoPvozaWYemOLe0ksd-IcHVE447oq4dlhceQ38JK-XCCs0u1sQRN5iD77JeClN2jUsLkzY-j-Fqrn6fHym72ZgQ46xGcRMyjU10-5Y9TKfIC6LKd2_w0su3w9Kox5230YYvVlnsmsqn67VkGt1ZS-a6BIA3DpIb0rLrLBeIPW0ZaBuYciaHCJIsaIIEmJYM4vxAJJdjdB_15UYpqsuwv-R343UUFDKvsicfWcP4jhMV27RQ3WLMadL3UQTms1IUn4kMUw5LINHjOrC1aWZDYg32QY9jptgQSbGMPkErqxmaqKJRIPb4Bk0ow3HZjEBbzCwZe3VM6xjvmvsX_Q3iU1t7IZEnPSMFabsTeAnu6Y9S16oQfiVQ8Ev-KCqwcS95PZpKheJ4R3qy1MNvErq1Mazj4IFFiEJKHGiKKE24GtQUQ8jQhom2OQ4cdv08yO9HDLNHDGwmbugSMj1S1akVJ8uD99KfanUydR574sYyHvD5-gwQevEk3YSsUBb7aY5tN0FEE-7DSJ5dymbCDk8WGEKGgSoiLk6Uw2fu5hpTw1UUpL7I_nG8oufsMcKQL5hzkX7ElpGKAeSPOSzTnlz520CZMBUHavYkomT811DE5OXv3OnalY9eakHVFSnZebuMjCKAVukZbJc_sIYLqSsnWLNE4yaAk-3Rzk9nBE0GnzbFu68rfI4fADT3FD_MqvbYzG9hqHjH8cqxDCRSfelEqhRSmAhg7Y98GrgT2ppfAVODDAXDH0EX12MHL0PRPQRmIvCWNztdaWVuMGSIOJR9tWaeWGmnfAJUYcjOJjH0lGW5ootLIL1035RvPSFleqI-XffnCLmRwyelrUWVlozYCgmZiQ7znC6BrznT8S3O0jWtE70RDsc2NeAva90GZ6DbtAgAaH8LS5bJPi7Lvy-6YmsDCQody_ZFJLhrC5btgzlWoLnx5dXstd1Wzo-R6mrWIQ-jIfTc51Mi9-kuzwgYByBgRs97JUq4-TatQzF1OwAgKmd8HooSZzuyrzPCzshwUyBFite3NRuqPiCoZ-pSQ4pgEbOVU=w1920-h917?auditContext=prefetch",
       achievement: "Selected for International Mathematics Competition",
       quote: "The supportive environment here helped me develop both academically and personally.",
       category: "student" as const,

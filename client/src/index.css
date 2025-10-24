@@ -2,7 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT MODE */
+/* High Contrast Mode Styles */
+.high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 90%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 100%;
+  --accent: 0 0% 30%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 100%;
+  --input: 0 0% 100%;
+  --ring: 0 0% 100%;
+}
+
+.high-contrast * {
+  border-width: 2px;
+  outline-width: 2px;
+}
+
+.high-contrast button,
+.high-contrast a {
+  font-weight: bold;
+}
+
+/* LIGHT MODE - Neo-Modern Vibrant Design */
 :root {
   --button-outline: rgba(0,0,0, .10);
   --badge-outline: rgba(0,0,0, .05);
@@ -14,17 +47,23 @@
   --elevate-1: rgba(0,0,0, .03);
   --elevate-2: rgba(0,0,0, .08);
 
+  /* Blue-Gold color scheme for GD Goenka School */
   --background: 210 30% 98%;
-
-  --foreground: 215 25% 12%;
-
-  --border: 210 15% 88%;
-
+  --foreground: 220 70% 20%;
+  --border: 45 50% 88%;
+  
+  /* Primary color - deep navy blue (#123985) */
+  --primary: 220 78% 30%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary color - gold (#FFD700) */
+  --secondary: 50 100% 50%;
+  --secondary-foreground: 220 78% 30%;
+  
+  /* Card styling with soft shadows and gold accents */
   --card: 0 0% 100%;
-
-  --card-foreground: 215 25% 12%;
-
-  --card-border: 210 10% 92%;
+  --card-foreground: 220 78% 30%;
+  --card-border: 50 80% 92%;
 
   --sidebar: 210 18% 96%;
 
@@ -48,13 +87,13 @@
 
   --popover-border: 210 10% 92%;
 
-  --primary: 215 95% 50%;
+  --primary: 220 78% 30%;
 
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 12% 94%;
+  --secondary: 50 100% 50%;
 
-  --secondary-foreground: 215 25% 12%;
+  --secondary-foreground: 220 78% 30%;
 
   --muted: 210 15% 94%;
 
@@ -240,6 +279,8 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-offset, 72px);
   }
 }
 
@@ -348,5 +389,205 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+
+  /* Banner Popup Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-in-top {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes slide-out-top {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+  }
+
+  @keyframes slide-in-bottom {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -40%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes slide-out-bottom {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-50%, -40%);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translate(-60%, -50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes slide-out-left {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-60%, -50%);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translate(-40%, -50%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @keyframes slide-out-right {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-40%, -50%);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @keyframes scale-out {
+    from {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .animate-fade-out {
+    animation: fade-out 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-top {
+    animation: slide-in-top 0.5s ease-out forwards;
+  }
+
+  .animate-slide-out-top {
+    animation: slide-out-top 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-bottom {
+    animation: slide-in-bottom 0.5s ease-out forwards;
+  }
+
+  .animate-slide-out-bottom {
+    animation: slide-out-bottom 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.5s ease-out forwards;
+  }
+
+  .animate-slide-out-left {
+    animation: slide-out-left 0.5s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.5s ease-out forwards;
+  }
+
+  .animate-slide-out-right {
+    animation: slide-out-right 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+
+  .animate-scale-out {
+    animation: scale-out 0.5s ease-out forwards;
+  }
+
+  /* Simple Banner Responsive Styles */
+  @media (max-width: 640px) {
+    .simple-banner {
+      margin: 1rem;
+      max-height: 80vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .simple-banner {
+      margin: 0.5rem;
+      max-height: 85vh;
+      border-radius: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .simple-banner {
+      max-width: 80vw;
+      max-height: 80vh;
+    }
   }
 }

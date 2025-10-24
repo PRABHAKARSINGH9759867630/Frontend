@@ -6,6 +6,7 @@ export interface QuickAction {
   title: string;
   icon: "login" | "payment" | "download" | "careers";
   description: string;
+  link?: string;
 }
 
 interface QuickActionsProps {
@@ -28,25 +29,47 @@ export function QuickActions({ actions }: QuickActionsProps) {
           {actions.map((action) => {
             const Icon = iconMap[action.icon];
             return (
-              <Card
-                key={action.id}
-                className="p-6 hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer group hover-elevate"
-                onClick={() => console.log("Quick action:", action.title)}
-                data-testid={`action-${action.id}`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
-                      <Icon className="w-6 h-6" />
+              <div key={action.id} data-testid={`action-${action.id}`}>
+                {action.link ? (
+                  <a
+                    href={action.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                    aria-label={action.title}
+                  >
+                    <Card className="p-6 hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer group hover-elevate">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
+                            <Icon className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold">{action.title}</h3>
+                            <p className="text-sm opacity-80">{action.description}</p>
+                          </div>
+                        </div>
+                        <ArrowRight className="w-6 h-6" />
+                      </div>
+                    </Card>
+                  </a>
+                ) : (
+                  <Card className="p-6 hover:bg-primary hover:text-primary-foreground transition-colors group hover-elevate">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors">
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold">{action.title}</h3>
+                          <p className="text-sm opacity-80">{action.description}</p>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-6 h-6" />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold">{action.title}</h3>
-                      <p className="text-sm opacity-80">{action.description}</p>
-                    </div>
-                  </div>
-                  <ArrowRight className="w-6 h-6" />
-                </div>
-              </Card>
+                  </Card>
+                )}
+              </div>
             );
           })}
         </div>

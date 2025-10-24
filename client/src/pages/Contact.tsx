@@ -1,13 +1,9 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
 import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
     <div className="min-h-screen">
-      <Header />
-
       <section className="relative h-96 bg-gradient-to-r from-chart-2 to-primary text-white flex items-center">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h1
@@ -29,8 +25,6 @@ export default function Contact() {
       </section>
 
       <ContactSection />
-      
-      <Footer />
     </div>
   );
 }

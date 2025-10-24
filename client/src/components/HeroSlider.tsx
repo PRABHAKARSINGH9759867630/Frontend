@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { GradientBackground } from "./GradientBackground";
+import { SchoolProps3D } from "./SchoolProps3D";
 
 export interface HeroSlide {
   id: number;
@@ -35,7 +37,10 @@ export function HeroSlider({ slides }: HeroSliderProps) {
   };
 
   return (
-    <div className="relative h-screen max-h-[800px] overflow-hidden">
+    <div className="relative h-screen max-h-[800px] overflow-hidden rounded-b-3xl">
+      {/* Modern floating shapes in background */}
+      <SchoolProps3D />
+      
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -45,11 +50,14 @@ export function HeroSlider({ slides }: HeroSliderProps) {
           transition={{ duration: 0.5 }}
           className="absolute inset-0"
         >
+          {/* Vibrant gradient overlay */}
+          <GradientBackground gradientType={currentSlide % 2 === 0 ? 'navy-to-gold' : 'gold-to-navy'} />
+          
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center opacity-70 mix-blend-overlay"
             style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
           
           <div className="relative h-full flex items-center">
             <div className="max-w-7xl mx-auto px-4 text-white">
@@ -75,13 +83,18 @@ export function HeroSlider({ slides }: HeroSliderProps) {
                 transition={{ delay: 0.4 }}
                 className="flex flex-wrap gap-4"
               >
-                <Button size="lg" variant="default" data-testid="button-hero-cta1">
+                <Button 
+                  size="lg" 
+                  variant="default" 
+                  className="rounded-full px-8 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-[#FFD700] to-[#FFC000] text-[#123985] font-bold hover:scale-105"
+                  data-testid="button-hero-cta1"
+                >
                   {slides[currentSlide].cta1Text}
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+                  className="rounded-full px-8 bg-[#123985]/10 backdrop-blur-sm border-[#123985]/30 text-white hover:bg-[#123985]/20 hover:scale-105 transition-all duration-300"
                   data-testid="button-hero-cta2"
                 >
                   {slides[currentSlide].cta2Text}

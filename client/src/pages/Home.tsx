@@ -1,8 +1,10 @@
-import { Header } from "@/components/Header";
-import { HeroSlider } from "@/components/HeroSlider";
+import { Hero3D } from "@/components/Hero3D";
 import { ScrollingNotices } from "@/components/ScrollingNotices";
 import { PrincipalMessage } from "@/components/PrincipalMessage";
-import { WelcomeSection } from "@/components/WelcomeSection";
+import { AboutSchool } from "@/components/AboutSchool";
+import { Academics } from "@/components/Academics";
+import { ActivitiesEvents } from "@/components/ActivitiesEvents";
+import { Achievements } from "@/components/Achievements";
 import { KeyFeatures } from "@/components/KeyFeatures";
 import { StudentSpotlight } from "@/components/StudentSpotlight";
 import { NewsSection } from "@/components/NewsSection";
@@ -15,19 +17,20 @@ import { GalleryPreview } from "@/components/GalleryPreview";
 import { Testimonials } from "@/components/Testimonials";
 import { QuickActions } from "@/components/QuickActions";
 import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
 import { SearchModal } from "@/components/SearchModal";
 import { AccessibilityWidget } from "@/components/AccessibilityWidget";
+import { AIChatAssistant } from "@/components/AIChatAssistant";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { useState } from "react";
 
-import heroImage from "@assets/generated_images/School_campus_hero_image_574848a6.png";
-import principalPhoto from "@assets/generated_images/Principal_professional_portrait_d7e8b372.png";
-import studentPhoto from "@assets/generated_images/Student_achievement_spotlight_23313d01.png";
-import labImage from "@assets/generated_images/Science_lab_campus_tour_9f1f27cd.png";
-import sportsImage from "@assets/generated_images/Sports_facilities_image_2ec22754.png";
-import parentPhoto from "@assets/generated_images/Parent_testimonial_portrait_7c79c4ef.png";
+
+import heroImage from "../assets/school_images/campus_aerial.png";
+import principalPhoto from "../assets/generated_images/Principal_professional_portrait_d7e8b372.png";
+import studentPhoto from "../assets/generated_images/Student_achievement_spotlight_23313d01.png";
+import labImage from "../assets/generated_images/Science_lab_campus_tour_9f1f27cd.png";
+import sportsImage from "../assets/generated_images/Sports_facilities_image_2ec22754.jpg";
+import parentPhoto from "../assets/generated_images/Parent_testimonial_portrait_7c79c4ef.png";
 
 export default function Home() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -35,19 +38,19 @@ export default function Home() {
   const heroSlides = [
     {
       id: 1,
+      tagline: "Empowering Young Minds with Knowledge and Values",
+      subtitle: "Discover a world of learning in motion at GD Goenka Public School",
       image: heroImage,
-      tagline: "Welcome to GD Goenka Public School",
-      subtitle: "Where Learning Meets Innovation and Every Student Achieves Their Full Potential",
-      cta1Text: "Apply Now",
-      cta2Text: "Virtual Tour",
+      cta1Text: "Explore Admissions",
+      cta2Text: "Virtual Campus Tour",
     },
     {
       id: 2,
+      tagline: "The World of Learning in Motion",
+      subtitle: "Building tomorrow's leaders with excellence in education since 1994",
       image: heroImage,
-      tagline: "Shaping Future Leaders",
-      subtitle: "Empowering Students Through Quality Education and Character Development",
-      cta1Text: "Learn More",
-      cta2Text: "Schedule Visit",
+      cta1Text: "Start Your Journey",
+      cta2Text: "Learn More",
     },
   ];
 
@@ -89,13 +92,19 @@ export default function Home() {
       title: "Co-curricular Activities",
       description: "Diverse programs in arts, music, drama, and clubs to nurture talents.",
     },
+    {
+      id: 5,
+      icon: "activities" as const,
+      title: "Co-curricular Activities",
+      description: "Diverse programs in arts, music, drama, and clubs to nurture talents.",
+    },
   ];
 
   const spotlights = [
     {
       id: 1,
-      name: "Emma Rodriguez",
-      photo: studentPhoto,
+      name: "Arjun Ranjeet",
+      photo: "https://lh3.googleusercontent.com/rd-d/ALs6j_FJ6SoTseNF1KNTSfM87d4TzBCwMJB3o1iqxaQgI46gkvkHH9rUSHed0LYY33ACDhi4UsmWlh7xFn32xEG214T1TZnzQsaNwKFnDa3tjkEx1cxW-kJ-ELxvGBUohfua2NpFbcuBlVwPyCBYw0L0JbZcpBQ52KdyPlYrgr5skNQAdK1v7alo-mDRLkSjNCbJTwy0H_KbQJkKcLxex2KzpQGVvczZ0cVeKxPP6O4X-k-t9HamhNA6wpcOE9s9xqvKcZITGgDHReC2-_FWZvoUMsjmPI5Gjldk4j5Vu2Zmuz3khtbKKRs0TRQQQV1mXcmObnfbgqHCnSXT1B-G48Il_QolJIuJ5fm_3h6hD1srbz9NVc_LiTHbrQaH2LOrdLcesS6eHt2uIGRuFkP9Bb5QiZwGMjfWc9ZdG7ktLojJWIW0cc-wzcaOB_16d6eWZoVCyqDVRC-lBGbL5bytrX0-2g2DnlWt2CjIwdKukBQAPcjx6Vy9azQbORNUNTcbk44IzjZgqPp-tmI3-D68B8E7ISbvFsV7CwX9oVi2TnGG5BKLddhO3sJQEk27SKIV6ogDhtczBcnglzyYacBfLCooRLZwFyI7b-A7EMGxHzyhPzPTh-E8MgjSIVXpff83fpB1XU_BsnC_L5PspHLnmYaNkY4b5-tq51xx69vKzbGJ4ZBrw-yAsswLvXz5El-xAapqFbR9QXaqm4VLKdv_A2a1FyM92rQUcwCHbcHY7bQJmSgqXZE3Yjtet12oaNXT4QoDpoIPfHvACNjgTch8lNh_ef5uQIY4SdBM_7h_Q-9-HhuqLMghUSwQWLbDBkAqSzoJjcHitR57ctB8aNtT6eoMbmfhkLLOIp4sBj_7XGrQNzVdMluex6SxaXHxO5PG-BM3RgKWQ9mB6A-qqu4n4qs4PqKZyJPAKdT9tWfxeKGAFe-iT0m9dVQhgLSEC-wFBjbJyV5jiXz-n-38DlvKpfAgKqisJHjQ8QO9CIryxthP1X5wAI8MJli-qkyQBn8Ywaft3fOTusKb63t84I_qV0OVhv2BHOksUINs8G7RUQOkpExhcOI4OMzR23u4Y6D9FUAMiTZmA1B06n-zhYAHmabC4DNYzeCn5pHrBf4fAPuTz8aL5FUq5LMMtg=w1920-h917?auditContext=prefetchhttps://lh3.googleusercontent.com/rd-d/ALs6j_HOsK7vArcqKfCBib2a9zxJd2ZeuFQd6mgOZjxlFmBGtTduAKVHgxNu7WBYslDPo3tY2cbwO4I4HPSs853x5F_3e1OLoPvozaWYemOLe0ksd-IcHVE447oq4dlhceQ38JK-XCCs0u1sQRN5iD77JeClN2jUsLkzY-j-Fqrn6fHym72ZgQ46xGcRMyjU10-5Y9TKfIC6LKd2_w0su3w9Kox5230YYvVlnsmsqn67VkGt1ZS-a6BIA3DpIb0rLrLBeIPW0ZaBuYciaHCJIsaIIEmJYM4vxAJJdjdB_15UYpqsuwv-R343UUFDKvsicfWcP4jhMV27RQ3WLMadL3UQTms1IUn4kMUw5LINHjOrC1aWZDYg32QY9jptgQSbGMPkErqxmaqKJRIPb4Bk0ow3HZjEBbzCwZe3VM6xjvmvsX_Q3iU1t7IZEnPSMFabsTeAnu6Y9S16oQfiVQ8Ev-KCqwcS95PZpKheJ4R3qy1MNvErq1Mazj4IFFiEJKHGiKKE24GtQUQ8jQhom2OQ4cdv08yO9HDLNHDGwmbugSMj1S1akVJ8uD99KfanUydR574sYyHvD5-gwQevEk3YSsUBb7aY5tN0FEE-7DSJ5dymbCDk8WGEKGgSoiLk6Uw2fu5hpTw1UUpL7I_nG8oufsMcKQL5hzkX7ElpGKAeSPOSzTnlz520CZMBUHavYkomT811DE5OXv3OnalY9eakHVFSnZebuMjCKAVukZbJc_sIYLqSsnWLNE4yaAk-3Rzk9nBE0GnzbFu68rfI4fADT3FD_MqvbYzG9hqHjH8cqxDCRSfelEqhRSmAhg7Y98GrgT2ppfAVODDAXDH0EX12MHL0PRPQRmIvCWNztdaWVuMGSIOJR9tWaeWGmnfAJUYcjOJjH0lGW5ootLIL1035RvPSFleqI-XffnCLmRwyelrUWVlozYCgmZiQ7znC6BrznT8S3O0jWtE70RDsc2NeAva90GZ6DbtAgAaH8LS5bJPi7Lvy-6YmsDCQody_ZFJLhrC5btgzlWoLnx5dXstd1Wzo-R6mrWIQ-jIfTc51Mi9-kuzwgYByBgRs97JUq4-TatQzF1OwAgKmd8HooSZzuyrzPCzshwUyBFite3NRuqPiCoZ-pSQ4pgEbOVU=w1920-h917?auditContext=prefetch",
       achievement: "National Science Olympiad Gold Medalist",
       quote: "Excellence Academy gave me the resources and mentorship to pursue my passion for science.",
       category: "student" as const,
@@ -103,12 +112,13 @@ export default function Home() {
     {
       id: 2,
       name: "Michael Chen",
-      photo: studentPhoto,
+      photo: "https://lh3.googleusercontent.com/rd-d/ALs6j_EvfOBLHzwiBlAAOTWv1suWzRvPy9_ZNDRQp5sKqcxAQC-aiOZvxnyW_p634xJQaNU0yrVoRG-TBgf4AnsUHH3cO1q2nr6-8h6hF8oxPWf2bUcg9DxOa2rhIdp-hLwE4v_EUW82lCIy59UnP5tfA-ZqgdLd26J6iDiPv6TyNRJXIIqFtpV2daGc8rkxg4TpPTxtehL0eBYys5qx4fp817meLqmplzWDFO9EIBNa-wmkNpZbtwstGbOU9I6JAh9n7HJ6BAGJN1dIktmoWNl9RnZnt75p6ELbArQsZCfBXDzv2m0sZwKTsk1RYyCcpzPUUKAiqOBfQ_zJAXO-DvN7ZW3xhKu0RLF5W9wmocp7iqk2yZAeVGALyHjIAlsKfSsyF2hjsuSCf6gsy95Cl-BiSq-2BaH24_MfhRccborfRELRv4W4OJPTMXU4lyoRkcZXaLyP5KVIBubOmmFj1A6xNC_xwvE6tmknOiy04z8wnVQi1_KHznVjplk5vQnIh6FdZvfrf_WcO6e1pNqrT5bA9mHE_wkJcL930FSHzH65pJb88UvFCnumW8-ar8VQSoU9fKa2g4oI5jDmzA8RKlIN69fGxzgZ_B06Y8gOCWnVj7mY4gY7-aEOUdiLSijTaJ7Z0r_QQr8b8ycRDWFtdE6wvu8EFJvsSRNm69zlpELm4QKn1aVv0QshyuBOAvmWTBfqVPn7V4HFLzsJmH1JiARk4_hS4czTDpvuiBMbHI3JE-yduWpivSR9___qDyEggCqbJqnXKu6V9s--DT-qwSWgJ5UskedKpvej6aolYG7WCPJTz6he1iN7CQlJndNk0mMA0RPOdSLAVJPtJExbV_rF220TNfhtICvdK5dTZZcVWK9j6-0qNZJiAr01ElY3dAdmJU5AsY1S-GJQeoPLhn72Fem_3zpnm7QOtTZrP_a19OA-dOtE57dgofHAcXASbgtJKIAEbiI7wtWQbekEd2jjv7MCNj1nq17Rnl6LmnNTKnXjIryvq2CMzKYmEMK3aeeUQGiuEkIJElj1mS_0lWhb62DYKP4KS2X3dmUJtU1Q3frkSFDqUTq5lwGiPMo17j60sjhQmjGwKEqNfGvRXrvQnoYin3kS4kEX115KwB2sxqoHcT2P58mrNQ=w1920-h917?auditContext=prefetch",
       achievement: "Selected for International Mathematics Competition",
       quote: "The supportive environment here helped me develop both academically and personally.",
       category: "student" as const,
     },
   ];
+  
 
   const newsArticles = [
     {
@@ -193,12 +203,12 @@ export default function Home() {
   ];
 
   const affiliations = [
-    { id: 1, name: "CBSE", logo: "" },
-    { id: 2, name: "IB", logo: "" },
-    { id: 3, name: "British Council", logo: "" },
-    { id: 4, name: "NABET", logo: "" },
-    { id: 5, name: "ISO 9001", logo: "" },
-    { id: 6, name: "UNESCO", logo: "" },
+    { id: 1, name: "CBSE", logo: "https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg" },
+    { id: 2, name: "Rotary Club", logo: "https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg" },
+    { id: 3, name: "Astropathshala ", logo: "https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg" },
+    { id: 4, name: "NCERT", logo: "https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg" },
+    { id: 5, name: "ISO 9001", logo: "https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg" },
+    { id: 6, name: "UNESCO", logo: "https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg" },
   ];
 
   const galleryItems = [
@@ -260,8 +270,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <Header />
-      
       <Button
         size="icon"
         className="fixed top-20 right-6 z-40 shadow-lg"
@@ -271,35 +279,35 @@ export default function Home() {
         <Search className="w-5 h-5" />
       </Button>
 
-      <HeroSlider slides={heroSlides} />
+      <Hero3D slides={heroSlides} />
       <ScrollingNotices notices={notices} />
+      <AIChatAssistant />
       <PrincipalMessage
         name="Dr. Anjali Sharma"
         title="Principal, GD Goenka Public School"
         photo={principalPhoto}
-        message="Welcome to GD Goenka Public School, where we believe every child has the potential to achieve greatness. Our commitment to academic excellence, combined with holistic development, ensures that our students from Pre-Primary to Grade 12 are well-prepared for the challenges of tomorrow. Together, we create a nurturing environment where curiosity thrives and dreams take flight."
+        message="The function of education is to teach one to think intensively and critically. Intelligence plus character – that is the goal of true education. At GD Goenka School, Rudrapur, we believe education is a shared commitment among dedicated teachers, motivated students, and supportive parents. Our aim is not only academic excellence but also the development of moral values, critical thinking, and lifelong learning."
         fullMessageLink="/principal-message"
       />
-      <WelcomeSection
-        title="Building Tomorrow's Leaders Today"
-        description="At GD Goenka Public School, we are dedicated to providing world-class education from Pre-Primary to Grade 12 that nurtures young minds, fosters creativity, and builds character. Our state-of-the-art facilities, experienced faculty, and innovative curriculum create the perfect environment for students to excel academically and personally."
-      />
+      <AboutSchool />
+      <Academics />
+      <ActivitiesEvents />
+      <Achievements />
       <KeyFeatures features={features} />
       <StudentSpotlight spotlights={spotlights} />
-      <NewsSection articles={newsArticles} />
+      {/* <NewsSection articles={newsArticles} /> */}
       <EventsPreview events={events} />
-      <VirtualTourSection thumbnailImage={labImage} />
+      <VirtualTourSection />
       <BlogPreview articles={blogArticles} />
       <StatsCounter stats={stats} />
       <Affiliations affiliations={affiliations} />
-      <GalleryPreview items={galleryItems} />
+      {/* <GalleryPreview items={galleryItems} /> */}
       <Testimonials testimonials={testimonials} />
-      <QuickActions actions={quickActions} />
+      {/* <QuickActions actions={quickActions} /> */}
       <ContactSection />
-      <Footer />
       
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-      <AccessibilityWidget />
+      
     </div>
   );
 }

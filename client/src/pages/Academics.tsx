@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BookOpen, Beaker, Calculator, Globe, Palette, Music, FlaskConical, Languages, Trophy, Code, Laptop } from "lucide-react";
@@ -55,7 +53,6 @@ export default function Academics() {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       <section className="relative h-96 bg-gradient-to-r from-chart-1 to-chart-2 text-white flex items-center">
         <div className="max-w-7xl mx-auto px-4">
@@ -181,7 +178,6 @@ export default function Academics() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

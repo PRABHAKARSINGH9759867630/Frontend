@@ -1,9 +1,7 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Trophy, Palette, Music, Drama, Code, Globe, Activity, Dumbbell, Volleyball, BadmintonRacket, Table2, PersonStanding, Waves, Puzzle } from "lucide-react";
 import { motion } from "framer-motion";
-import sportsImage from "@assets/generated_images/Sports_facilities_image_2ec22754.png";
+const sportsImage = "http://localhost:1337/uploads/IMG_3418_a3ce719b21.JPG";
 
 export default function Activities() {
   const clubs = [
@@ -37,7 +35,6 @@ export default function Activities() {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       <section className="relative h-96 bg-gradient-to-r from-chart-2 to-chart-1 text-white flex items-center">
         <div className="max-w-7xl mx-auto px-4">
@@ -135,8 +132,6 @@ export default function Activities() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Award, Medal, Star } from "lucide-react";
@@ -99,7 +97,6 @@ export default function Achievements() {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       <section className="relative h-96 bg-gradient-to-r from-accent to-chart-3 text-white flex items-center">
         <div className="max-w-7xl mx-auto px-4">
@@ -239,7 +236,6 @@ export default function Achievements() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

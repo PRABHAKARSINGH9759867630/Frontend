@@ -21,43 +21,51 @@ export function ContactSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">Get In Touch</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+          Get In Touch
+        </h2>
         <div className="grid lg:grid-cols-2 gap-8">
+          {/* Contact Form */}
           <Card className="p-8">
             <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <Input
                 placeholder="Your Name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                data-testid="input-name"
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
               <Input
                 type="email"
                 placeholder="Your Email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                data-testid="input-email"
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
               <Input
                 placeholder="Your Phone"
                 value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                data-testid="input-phone"
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
               />
               <Textarea
                 placeholder="Your Message"
                 rows={5}
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                data-testid="input-message"
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
               />
-              <Button type="submit" className="w-full" data-testid="button-submit-contact">
+              <Button type="submit" className="w-full">
                 Send Message
               </Button>
             </form>
           </Card>
 
+          {/* Contact Details */}
           <div className="space-y-6">
             <Card className="p-6">
               <div className="flex items-start gap-4">
@@ -67,9 +75,11 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-bold mb-2">Our Location</h4>
                   <p className="text-muted-foreground">
-                    Sector 48, Sohna Road<br />
-                    Gurugram, Haryana<br />
-                    India - 122018
+                    200 Mtrs, Inside Dibdiba Gate,
+                    <br />
+                    Rudrapur - Bilaspur Road
+                    <br />
+                    India - 244923
                   </p>
                 </div>
               </div>
@@ -82,7 +92,11 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-bold mb-2">Phone</h4>
-                  <p className="text-muted-foreground">+91 (124) 456-7890<br />+91 (124) 456-7891</p>
+                  <p className="text-muted-foreground">
+                    +(91) 706-003-7789
+                    <br />
+                    +(91) 706-004-7789
+                  </p>
                 </div>
               </div>
             </Card>
@@ -95,17 +109,24 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-bold mb-2">Email</h4>
                   <p className="text-muted-foreground">
-                    info@gdgoenka.edu<br />
-                    admissions@gdgoenka.edu
+                    contact@gdgoenkarudrapur.com
+                    <br />
+                    marketing@gdgoenkarudrapur.com
                   </p>
                 </div>
               </div>
             </Card>
 
+            {/* Google Maps Embed */}
             <div className="aspect-video rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-muted flex items-center justify-center">
-                <p className="text-muted-foreground">Google Maps Embed</p>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2195.5275553652723!2d79.35832848878398!3d28.949156303536313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a8035105559db%3A0x50b189c262355855!2sG%20D%20Goenka%20Public%20School%2C%20Rudrapur!5e0!3m2!1sen!2sin!4v1761211293257!5m2!1sen!2sin"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full border-0"
+                title="Google Map Location"
+              ></iframe>
             </div>
           </div>
         </div>

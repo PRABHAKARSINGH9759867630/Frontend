@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, MapPin, Tag } from "lucide-react";
@@ -99,7 +97,6 @@ export default function Events() {
 
   return (
     <div className="min-h-screen">
-      <Header />
 
       <section className="relative h-96 bg-gradient-to-r from-primary to-accent text-white flex items-center">
         <div className="max-w-7xl mx-auto px-4">
@@ -199,7 +196,6 @@ export default function Events() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
