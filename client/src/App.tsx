@@ -64,14 +64,15 @@ function App() {
             <Toaster />
             {/* Add floating shapes for the entire app */}
             <FloatingShapes />
-            <AccessibilityEnhancer />
-            <SmoothScroll>
-              <div className="relative z-10">
-                <Header />
-                <Router />
-                <Footer />
-              </div>
-            </SmoothScroll>
+            <AccessibilityEnhancer>
+              <SmoothScroll>
+                <div className="relative z-10">
+                  <Header />
+                  <Router />
+                  <Footer />
+                </div>
+              </SmoothScroll>
+            </AccessibilityEnhancer>
           </TooltipProvider>
         </LanguageProvider>
       </ThemeProvider>
